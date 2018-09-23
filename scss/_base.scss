@@ -24,13 +24,6 @@ a{
 *, *:after, *:before {
     box-sizing:border-box;
 }
-.clear:after,
-.content:after, 
-.contact-box:after{
-    display: block;
-    content: "";
-    clear: both;
-}
 .content{
 	max-width:1600px;
 	padding:0 15px;
@@ -39,15 +32,22 @@ a{
 .flex{
 	@include flex();
 }
+.wrapper{
+	position: relative;
+	padding-top:270px;
+	&.index{
+		padding-top:0;
+	}
+}
 .side-block-wrap{
 	.block--lg{
-		width:60%;
+		width:72%;
 		padding-left:165px;
 	}
 	.block--sm{
 		-webkit-box-flex: 1;
 		-moz-box-flex: 1;
-		width: 40%;
+		width:28%;
 		-webkit-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
